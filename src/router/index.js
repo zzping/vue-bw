@@ -6,6 +6,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 // 引入页面组件，命名为Login
 import Login from '@/components/Login'
+// 引入首页组件
+import Home from '@/components/Home'
 
 // 使用路由依赖
 Vue.use(Router)
@@ -17,6 +19,11 @@ export default new Router({
       path: '/',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/home',
+      name: 'Home',
+      component: Home
     }
   ]
 })

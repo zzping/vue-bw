@@ -19,6 +19,18 @@ import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
+// 导入自己封装的axios请求库
+import {getRequest} from "./utils/api";
+import {postRequest} from "./utils/api";
+import {deleteRequest} from "./utils/api";
+import {putRequest} from "./utils/api";
+
+// 自定义插件
+Vue.prototype.getRequest = getRequest;
+Vue.prototype.postRequest = postRequest;
+Vue.prototype.deleteRequest = deleteRequest;
+Vue.prototype.putRequest = putRequest;
+
 // 关闭生产模式下给出的提示
 Vue.config.productionTip = false
 
